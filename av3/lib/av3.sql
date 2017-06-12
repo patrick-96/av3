@@ -111,6 +111,7 @@ fetch next from c_busca
 into @ra
 WHILE @@FETCH_STATUS = 0
 begin
+set @exame=null
 if (@disciplina_nome like 'Arquitetura e Organização de Computadores' or @disciplina_nome like 'Laboratório de Hardware' or @disciplina_nome like 'Banco de Dados' )
 begin
 set @nome_aluno=(select aluno.nome 
